@@ -8,7 +8,7 @@ x = rand(5, 1)
 xPrev = x;
 x = D\(D-A)*xPrev + D\b;
 
-while(n<=N & (abs(x - xPrev) > toll))
+while(n<=N & (norm(x - xPrev) > toll))
     xPrev = x;
     x = D\(D-A)*xPrev + D\b;
     n = n+1;
